@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahil Pannu | Cybersecurity Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #0a0a0a;
+      --text-color: #f0f0f0;
+      --link-color: #00bcd4;
+      --header-bg: #121212;
+      --footer-color: #999;
+    }
+
+    body.light {
+      --bg-color: #f9f9f9;
+      --text-color: #111;
+      --link-color: #1e88e5;
+      --header-bg: #ffffff;
+      --footer-color: #444;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background-color: var(--header-bg);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img.profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid var(--link-color);
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      color: var(--footer-color);
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: var(--link-color);
+      border-bottom: 1px solid var(--link-color);
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: var(--link-color);
+      color: var(--bg-color);
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #0097a7;
+    }
+    .toggle-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .toggle-button {
+      background: none;
+      border: 2px solid var(--link-color);
+      color: var(--link-color);
+      padding: 5px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .toggle-button:hover {
+      background-color: var(--link-color);
+      color: var(--bg-color);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--header-bg);
+      color: var(--footer-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+    <h1>Sahil Pannu</h1>
+    <p>Cybersecurity Enthusiast | B.Tech CSE | TryHackMe Top 9%</p>
+    <p>SOC Intern @ DCM Infotech</p>
+    <a class="button" href="resume.pdf" target="_blank">📄 Download Resume</a>
+    <div class="toggle-container">
+      <button id="themeToggle" class="toggle-button" onclick="toggleTheme()">🌙 Light Mode</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>🔗 Links</h2>
+    <ul>
+      <li><a href="https://github.com/itssahilpannu" target="_blank">GitHub Profile</a></li>
+      <li><a href="https://www.linkedin.com/in/itssahilpannu" target="_blank">LinkedIn Profile</a></li>
+      <li><a href="mailto:youremail@example.com">Email Me</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎓 Certifications & Learning</h2>
+    <ul>
+      <li>Google Cybersecurity Certificate – 4 out of 8 courses completed</li>
+      <li>TryHackMe – Pre-Security, Intro to Cybersecurity, Cybersecurity 101 (Top 9%)</li>
+      <li>DCM Infotech Internship – SOC Monitoring using RSA NetWitness</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sahil Pannu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.getElementById('themeToggle');
+      body.classList.toggle('light');
+      const isLight = body.classList.contains('light');
+      button.textContent = isLight ? '🌙 Dark Mode' : '🌙 Light Mode';
+    }
+  </script>
+</body>
+</html>
